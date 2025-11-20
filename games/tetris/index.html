@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tetris Game</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="tetris.css">
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Left Panel: Game -->
+            <div class="col-lg-8">
+                <!-- Header -->
+                <div class="text-center mt-4">
+                    <h1>🟦 Tetris Game</h1>
+                    <a href="../../index.html" class="btn btn-sm btn-secondary mb-3">← Back to Games</a>
+                </div>
+
+                <!-- Player Name Input -->
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <div class="row align-items-center">
+                            <div class="col-md-6">
+                                <label for="playerName" class="form-label">Player Name:</label>
+                                <input type="text" class="form-control" id="playerName" placeholder="Enter your name" maxlength="20">
+                            </div>
+                            <div class="col-md-6 mt-2 mt-md-0">
+                                <button id="startBtn" class="btn btn-success btn-lg w-100">Start Game</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Game Card -->
+                <div class="card game-card">
+                    <div class="card-body">
+                        <!-- Score & Level Display -->
+                        <div class="row text-center mb-3">
+                            <div class="col-4">
+                                <h5>Score</h5>
+                                <h3 id="score">0</h3>
+                            </div>
+                            <div class="col-4">
+                                <h5>Level</h5>
+                                <h3 id="level">1</h3>
+                            </div>
+                            <div class="col-4">
+                                <h5>Lines</h5>
+                                <h3 id="lines">0</h3>
+                            </div>
+                        </div>
+
+                        <!-- Game Area -->
+                        <div class="game-container">
+                            <!-- Main Canvas -->
+                            <div class="canvas-wrapper">
+                                <canvas id="gameCanvas" width="300" height="600"></canvas>
+                                
+                                <!-- Game Over Overlay -->
+                                <div id="gameOver" class="game-over">
+                                    <h2>Game Over!</h2>
+                                    <p>Score: <span id="finalScore">0</span></p>
+                                    <p>Lines: <span id="finalLines">0</span></p>
+                                    <button id="restartBtn" class="btn btn-primary btn-lg">Play Again</button>
+                                </div>
+                            </div>
+
+                            <!-- Next Piece Preview -->
+                            <div class="next-piece-container">
+                                <h5>Next Piece</h5>
+                                <canvas id="nextCanvas" width="120" height="120"></canvas>
+                            </div>
+                        </div>
+
+                        <!-- Mobile Controls -->
+                        <div class="mobile-controls mt-4">
+                            <div class="row g-2">
+                                <div class="col-12 text-center mb-2">
+                                    <button id="rotateBtn" class="btn btn-info btn-lg">🔄 Rotate</button>
+                                </div>
+                                <div class="col-4 text-center">
+                                    <button id="leftBtn" class="btn btn-primary btn-lg">⬅️</button>
+                                </div>
+                                <div class="col-4 text-center">
+                                    <button id="downBtn" class="btn btn-warning btn-lg">⬇️</button>
+                                </div>
+                                <div class="col-4 text-center">
+                                    <button id="rightBtn" class="btn btn-primary btn-lg">➡️</button>
+                                </div>
+                                <div class="col-12 text-center mt-2">
+                                    <button id="dropBtn" class="btn btn-danger btn-lg">⚡ Drop</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Keyboard Instructions -->
+                        <div class="text-center mt-3">
+                            <small class="text-muted">
+                                ⬅️ Left | ➡️ Right | ⬇️ Down | ⬆️ Rotate | Space: Drop
+                            </small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Panel: Leaderboard -->
+            <div class="col-lg-4">
+                <div class="card leaderboard-card mt-4">
+                    <div class="card-header bg-warning text-dark">
+                        <h4 class="mb-0">🏆 Top 10 Players</h4>
+                    </div>
+                    <div class="card-body">
+                        <div id="leaderboard">
+                            <p class="text-muted text-center">No records yet. Be the first!</p>
+                        </div>
+                        <button id="clearLeaderboard" class="btn btn-danger btn-sm w-100 mt-3">Clear Records</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="tetris.js"></script>
+</body>
+</html>
