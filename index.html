@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Game Portal</title>
+    <title>Game Portal - Nasa Def</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
@@ -12,37 +12,116 @@
     <nav class="navbar navbar-dark bg-dark">
         <div class="container">
             <span class="navbar-brand mb-0 h1">🎮 Game Portal</span>
+            <span class="navbar-text text-light">
+                by <a href="https://www.nasadef.com.my" class="text-warning text-decoration-none" target="_blank">Nasa Def</a>
+            </span>
         </div>
     </nav>
 
-    <!-- Game Grid -->
-    <div class="container mt-5">
+    <!-- Hero Section -->
+    <div class="hero-section">
+        <div class="container text-center">
+            <h1 class="display-4 fw-bold mb-3">Welcome to Game Portal</h1>
+            <p class="lead mb-4">Koleksi game klasik untuk semua umur. Main sekarang!</p>
+        </div>
+    </div>
+
+    <!-- Games Grid -->
+    <div class="container mt-5 mb-5">
         <div class="row g-4">
             <!-- Tic Tac Toe -->
-            <div class="col-md-6">
-                <div class="card">
+            <div class="col-md-6 col-lg-4">
+                <div class="card game-card">
                     <div class="card-body text-center">
-                        <div class="game-thumb">❌⭕</div>
+                        <div class="game-thumb tic-tac-toe-thumb">❌⭕</div>
                         <h5 class="card-title mt-3">Tic Tac Toe</h5>
-                        <p class="card-text">Classic 3x3 grid game</p>
-                        <a href="games/tic-tac-toe/index.html" class="btn btn-primary">Play</a>
+                        <p class="card-text">Classic 3x3 grid game. First to get 3 in a row wins!</p>
+                        <div class="game-stats mb-3">
+                            <span class="badge bg-success">2 Players</span>
+                            <span class="badge bg-info">Easy</span>
+                        </div>
+                        <a href="games/tic-tac-toe/index.html" class="btn btn-primary w-100">Play Now</a>
                     </div>
                 </div>
             </div>
 
             <!-- Snake -->
-            <div class="col-md-6">
-                <div class="card">
+            <div class="col-md-6 col-lg-4">
+                <div class="card game-card">
                     <div class="card-body text-center">
-                        <div class="game-thumb">🐍</div>
+                        <div class="game-thumb snake-thumb">🐍</div>
                         <h5 class="card-title mt-3">Snake</h5>
-                        <p class="card-text">Classic snake eating game</p>
-                        <a href="games/snake/index.html" class="btn btn-primary">Play</a>
+                        <p class="card-text">Guide the snake to eat food. Don't hit walls or yourself!</p>
+                        <div class="game-stats mb-3">
+                            <span class="badge bg-success">1 Player</span>
+                            <span class="badge bg-warning">Medium</span>
+                        </div>
+                        <a href="games/snake/index.html" class="btn btn-primary w-100">Play Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tetris -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card game-card">
+                    <div class="card-body text-center">
+                        <div class="game-thumb tetris-thumb">🟦</div>
+                        <h5 class="card-title mt-3">Tetris</h5>
+                        <p class="card-text">Stack blocks and clear lines. Mobile controls included!</p>
+                        <div class="game-stats mb-3">
+                            <span class="badge bg-success">1 Player</span>
+                            <span class="badge bg-danger">Hard</span>
+                            <span class="badge bg-warning">🏆 Leaderboard</span>
+                        </div>
+                        <a href="games/tetris/index.html" class="btn btn-primary w-100">Play Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Coming Soon Section -->
+        <div class="coming-soon-section mt-5">
+            <h3 class="text-center mb-4">🔜 Coming Soon</h3>
+            <div class="row g-3">
+                <div class="col-6 col-md-3">
+                    <div class="coming-soon-card">
+                        <span class="game-icon">🐦</span>
+                        <p class="game-name">Flappy Bird</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="coming-soon-card">
+                        <span class="game-icon">🔢</span>
+                        <p class="game-name">2048</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="coming-soon-card">
+                        <span class="game-icon">👾</span>
+                        <p class="game-name">Space Invaders</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="coming-soon-card">
+                        <span class="game-icon">🏓</span>
+                        <p class="game-name">Pong</p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
+    <!-- Footer -->
+    <footer class="footer mt-5 py-4 bg-dark text-light">
+        <div class="container text-center">
+            <p class="mb-2">🎮 Game Portal by <a href="https://www.nasadef.com.my" class="text-warning text-decoration-none" target="_blank">Nasa Def Sdn Bhd</a></p>
+            <p class="mb-2">Developed by <strong>Nik Mohd Shafik Izwan</strong></p>
+            <p class="mb-0">
+                <a href="mailto:nikshafik@nasadef.com.my" class="text-light">nikshafik@nasadef.com.my</a> | 
+                <a href="tel:+60174511455" class="text-light">+6017-451 1455</a>
+            </p>
+        </div>
+    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>

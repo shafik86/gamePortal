@@ -1,26 +1,243 @@
+/* Global Styles */
 body {
-    background-color: #f8f9fa;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     min-height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.game-thumb {
-    font-size: 80px;
-    height: 150px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    border-radius: 10px;
+/* Navbar */
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* Hero Section */
+.hero-section {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 60px 0;
+    margin-top: 20px;
+    border-radius: 15px;
     color: white;
 }
 
-.card {
-    border: none;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    transition: transform 0.3s;
+.hero-section h1 {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
-.card:hover {
+.hero-section .lead {
+    font-size: 1.3rem;
+}
+
+/* Game Cards */
+.game-card {
+    border: none;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    border-radius: 15px;
+    overflow: hidden;
+    background: white;
+    height: 100%;
+}
+
+.game-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Game Thumbnails */
+.game-thumb {
+    font-size: 80px;
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    margin: 20px auto;
+    max-width: 250px;
+    position: relative;
+    overflow: hidden;
+}
+
+.tic-tac-toe-thumb {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+.snake-thumb {
+    background: linear-gradient(135deg, #00b09b 0%, #96c93d 100%);
+    color: white;
+}
+
+.tetris-thumb {
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    color: white;
+}
+
+/* Game Stats */
+.game-stats {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.game-stats .badge {
+    font-size: 0.85rem;
+    padding: 6px 12px;
+}
+
+/* Card Title & Text */
+.card-title {
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.card-text {
+    color: #666;
+    font-size: 0.95rem;
+    min-height: 48px;
+}
+
+/* Buttons */
+.btn-primary {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border: none;
+    padding: 12px 20px;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+
+.btn-primary:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+/* Coming Soon Section */
+.coming-soon-section {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.coming-soon-section h3 {
+    color: #333;
+    font-weight: bold;
+}
+
+.coming-soon-card {
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    padding: 30px 20px;
+    border-radius: 10px;
+    text-align: center;
+    transition: all 0.3s;
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+.coming-soon-card:hover {
+    opacity: 1;
     transform: translateY(-5px);
-    box-shadow: 0 8px 12px rgba(0,0,0,0.15);
+}
+
+.coming-soon-card .game-icon {
+    font-size: 50px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.coming-soon-card .game-name {
+    font-weight: bold;
+    color: #555;
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+/* Footer */
+.footer {
+    margin-top: auto;
+}
+
+.footer p {
+    margin-bottom: 5px;
+}
+
+.footer a:hover {
+    text-decoration: underline !important;
+}
+
+/* Container Background */
+.container {
+    position: relative;
+    z-index: 1;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 40px 20px;
+    }
+    
+    .hero-section h1 {
+        font-size: 2rem;
+    }
+    
+    .hero-section .lead {
+        font-size: 1.1rem;
+    }
+    
+    .game-thumb {
+        font-size: 60px;
+        height: 150px;
+    }
+    
+    .coming-soon-card .game-icon {
+        font-size: 40px;
+    }
+}
+
+/* Animations */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.game-thumb {
+    animation: float 3s ease-in-out infinite;
+}
+
+.tic-tac-toe-thumb {
+    animation-delay: 0s;
+}
+
+.snake-thumb {
+    animation-delay: 0.5s;
+}
+
+.tetris-thumb {
+    animation-delay: 1s;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
 }
