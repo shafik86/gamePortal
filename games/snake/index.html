@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake Game</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="snake.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="text-center mt-4">
+            <h1>🐍 Snake Game</h1>
+            <a href="../../index.html" class="btn btn-sm btn-secondary mb-3">← Back to Games</a>
+        </div>
+
+        <!-- Game Card -->
+        <div class="card game-card">
+            <div class="card-body">
+                <!-- Score Display -->
+                <div class="text-center mb-3">
+                    <h4>Score: <span id="score">0</span></h4>
+                    <p class="text-muted mb-0">Use Arrow Keys to Move</p>
+                </div>
+
+                <!-- Canvas -->
+                <div class="canvas-container">
+                    <canvas id="gameCanvas" width="600" height="600"></canvas>
+                </div>
+
+                <!-- Game Over Overlay -->
+                <div id="gameOver" class="game-over">
+                    <h2>Game Over!</h2>
+                    <p>Final Score: <span id="finalScore">0</span></p>
+                    <button id="restartBtn" class="btn btn-primary btn-lg">Play Again</button>
+                </div>
+
+                <!-- Controls Info -->
+                <div class="text-center mt-3">
+                    <small class="text-muted">
+                        ⬆️ Up | ⬇️ Down | ⬅️ Left | ➡️ Right
+                    </small>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="snake.js"></script>
+</body>
+</html>
